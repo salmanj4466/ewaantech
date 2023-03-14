@@ -29,13 +29,13 @@
          <div class="container">
             <div class="row align-items-center">
                <div class="col-5 col-md-7">
-                  <img class="img-fluid mr-4" src="assets/images/logo.png" alt="logo">
+                 <a href="index.html"><img class="img-fluid mr-4" src="assets/images/logo.png" alt="logo"></a>
                </div>
                <div class="col-7 col-md-5">
                   <ul class="nav justify-content-end align-items-center">
 
                      <li class="nav-item">
-                        <a href="javascript:void(0)"><i class="fa fa-search"></i></a>
+                        <a href="javascript:void(0)" data-toggle="modal" data-target="#search"><i class="fa fa-search"></i></a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="#">Get in touch</a>
@@ -208,8 +208,8 @@
                      conversation and see how we can help you grow your business.</p>
                </div>
 
-               <div class="col-lg-6 col-xl-5 offset-xl-1">
-                  <form class="mt-3">
+               <div class="col-lg-6 col-xl-5 offset-xl-1 contact-bg-img">
+                  <form class="mt-3 px-5 mx-4 pb-5">
                      <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" placeholder="Enter full name">
@@ -292,8 +292,8 @@
                           class="border-bottom mt-1">info@ewaantech.com</a></p>
                   <h5 class="mt-lg-5 pt-lg-4">Follow us</h5>
                   <ul class="social-link justify-content-center my-4 my-md-0">
-                      <li> <a href="javascript:void(0)"><img src="assets/images/fb.png" alt="fb"></a></li>
-                      <li> <a href="javascript:void(0)"><img src="assets/images/linkedin.png" alt="linkedin"></a></li>
+                      <li> <a href="javascript:void(0)"><i class="fa fa-facebook"></i></a></li>
+                      <li> <a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a></li>
                   </ul>
               </div>
           </div>
@@ -327,7 +327,7 @@
                   </div>
                   <div class="col-lg-3 col-xl-3 text-center text-lg-right mt-4 mt-lg-0">
                       <a href="javascript:void()" class="text-dark mr-2">Talk to Us</a>
-                      <a href="javascript:void()"><img width="50" src="assets/images/talk.png" alt="Talk"></a>
+                      <a href="javascript:void()"><i class="fa fa-comments"></i></a>
                       <!-- <a href="javascript:void()" class="arrow-top" id="scroll"><i class="fa fa-angle-up"></i></a> -->
                   </div>
               </div>
@@ -336,6 +336,31 @@
   </footer>
 
    <div class="overlay-sidebar"></div>
+
+
+   <!-- Modal -->
+<div class="modal fade" id="search" tabindex="-1" aria-labelledby="searchLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="searchLabel">Search</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group mt-3">
+    <input type="text" class="form-control" placeholder="Search here">
+  </div>
+ 
+</form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
    <!-- Jquery -->
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
    <script src="assets/js/popper.min.js"></script>

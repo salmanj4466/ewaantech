@@ -614,11 +614,21 @@ header a {
   margin: 20px auto;
 }
 .clients-section {
-  background-image: url('../images/testi.png');
+
   padding: 30px 0 200px;
-  background-repeat: no-repeat;
-  background-position: top right;
+
   margin-bottom: 80px;
+}
+
+.contact-bg-img:before {
+    content: "";
+    background-image: url('../images/testi.png');
+      background-repeat: no-repeat;
+/*  background-position: top right;*/
+  width: 1000px;
+  height: 100%;
+  position: absolute;
+/*  padding: 60px;*/
 }
 
 .clients-section h2 {
@@ -971,7 +981,8 @@ footer ul li a {
 
 
 
-footer .social-link a {
+footer .social-link a,
+.footer-bottom .fa-comments {
   font-size: 18px;
   width: 40px;
   height: 40px;
@@ -983,7 +994,15 @@ footer .social-link a {
   line-height: 40px;
 }
 
-footer ul li a:hover {
+.footer-bottom .fa-comments {
+    width: 50px;
+  height: 50px;
+  line-height: 50px;
+
+}
+
+footer ul li a:hover,
+.footer-bottom .fa-comments:hover {
   background: #D32031;
 }
 
@@ -1194,12 +1213,17 @@ header .menu-second .dropdown-menu {
 .portfolio-section .nav-tabs a.active {
   background: #D12030;
   color: white;
+  border-radius: 0;
+}
+
+.portfolio-section .navbar {
+  padding: 0;
 }
 
 .portfolio-section ul li a.active:after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -9px;
 
   left: 50%;
   width: 0;
@@ -1217,6 +1241,7 @@ header .menu-second .dropdown-menu {
 
 .portfolio-section ul li a {
   color: #252525;
+padding: 0.7rem 1rem;
 
 }
 
@@ -1461,6 +1486,11 @@ header .menu-second .dropdown-menu {
   border: 1px solid #D12030;
   background: #D12030;
  }
+
+
+.service-block .card:hover .title {
+  color: #fff;
+}
 
 .service-block .card:hover .icon-white {
   display: block;
@@ -1811,6 +1841,10 @@ header .menu-second .dropdown-menu {
   padding: 120px 50px;
   text-align: center;
   }
+
+  .portfolio-section .navbar {
+    overflow: auto;
+  }
 }
 
 @media (max-width: 576px) {
@@ -1919,6 +1953,9 @@ header .menu-second .dropdown-menu {
     font-size: 13px;
   }
 
+.service-page .bg-light {
+    padding: 50px 20px;
+  }
 
 }
 @media(max-width:330px) {
