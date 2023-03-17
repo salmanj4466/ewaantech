@@ -251,9 +251,19 @@ header #navbar_main .nav-item img {
 }
 
 header .nav-link {
+  text-align: center;
   padding: 0;
-  font-size: 14px;
-  color: #36383A !important;
+  color: #000;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  padding: 10px 0 !important;
+  cursor: pointer;
+}
+.mobile-offcanvas .nav-link {
+  text-align: center;
+  padding: 0;
+  font-size: 20px;
+  color: white !important;
   font-weight: 500;
   border-bottom: 2px solid transparent;
   padding: 10px 0 !important;
@@ -261,7 +271,7 @@ header .nav-link {
 }
 
 header .nav-item.active .nav-link {
-  color: #36383A !important;
+  color: rgb(202, 196, 196) !important;
   font-weight: 600;
   border-bottom: 2px solid #9B362B;
 
@@ -403,9 +413,11 @@ header a {
 .hero-main  {
     margin-top: -100px;
 }
-
+.hero-main .hero-section{
+  padding-bottom: 160px;
+}
 .fixed-icon {
-    margin-top: -120px;
+    margin-top: -140px;
     padding-bottom: 30px;
 
 }
@@ -419,7 +431,8 @@ header a {
 }
 
 .hero-section.inner-hero {
-  padding: 180px 0 40px;
+  padding: 320px 0 40px;
+  margin-top: -200px;
 }
 
 .hero-section h2 {
@@ -447,6 +460,9 @@ header a {
   font-weight: 400;
   color: #252525;
   border-bottom: 1px solid #252525;
+}
+.hero-section a:hover{
+  color: #816C4C;
 }
 
 .owl-carousel .owl-dots .owl-dot.active span,
@@ -498,7 +514,11 @@ header a {
   top: -85px;
   background: #f9f5f0 !important;
   color: #c1a068 !important;
-
+}
+.owl-nav button.owl-next:hover,
+.owl-nav button.owl-prev:hover{ 
+  color: #f9f5f0 !important;
+  background-color: #c1a068 !important;
 }
 
 /* .contact-section */
@@ -667,6 +687,7 @@ header a {
 /* services-detail */
 .hero-section .submit{
   border-radius: 0px;
+  text-transform: uppercase;
 } 
 .hero-section .form-control{
   border-radius: 0px;
@@ -744,6 +765,9 @@ header a {
 
 .work-section {
   padding: 60px 0;
+}
+.work-section .work-link:hover{
+  color: #816C4C;
 }
 
 .work-section .work-inner {
@@ -852,8 +876,8 @@ header a {
 }
 
 .blog-details .blog-box .blog-img {
-  width: 300px;
-  height: 199px;
+  width: 289px;
+  height: 192px;
 }
 
 .blog-details .date {
@@ -875,7 +899,6 @@ header a {
   padding-top: 15px;
   font-size: 22px;
   font-weight: 500;
-  font-family: "FuturaBT-Medium";
   color: #252525;
 }
 
@@ -902,6 +925,15 @@ header a {
   border-bottom: 1px solid #3E3E3D;
 }
 
+.service-page h5 a {
+  color: #3E3E3D;
+  font-size: 22px;
+  border-bottom: 1px solid #3E3E3D;
+  transition-duration: 0.6s;
+}
+.service-page h5 a:hover{
+  color: #816C4C; 
+}
 .service-page h5 a {
   color: #3E3E3D;
   font-size: 22px;
@@ -1001,10 +1033,19 @@ footer .social-link a,
 
 }
 
-footer ul li a:hover,
 .footer-bottom .fa-comments:hover {
   background: #D32031;
+  color: white;
 }
+footer .social-link a:hover{
+  color: white !important;
+  background: #D32031;
+}
+
+footer ul li a:hover {
+  color: #816C4C !important;
+}
+
 
 .footer-bottom {
   padding: 30px 0 20px;
@@ -1036,7 +1077,7 @@ footer ul li a:hover,
 }
 
 .footer-bottom ul li a {
-  font-weight: 600;
+  font-weight: 400;
   font-size: 13px;
 }
 
@@ -1076,7 +1117,12 @@ footer ul li a:hover,
 
 
 .offcanvas-header {
+  margin-bottom: 30px;
   display: block;
+}
+.offcanvas-header .navbar-toggler {
+  display: block !important;
+  margin-left: auto;
 }
 
 .mobile-offcanvas {
@@ -1089,11 +1135,11 @@ footer ul li a:hover,
   left: 0;
   height: 100%;
   z-index: 1200;
-  width: 250px;
+  width: 100%;
+  background-color: #000;
   /*    overflow-y: scroll;
     overflow-x: hidden;*/
   transition: visibility 0.4s ease-in-out, transform 0.4s ease-in-out;
-  background-color: #fff !important;
 }
 
 html:lang(ar) .mobile-offcanvas {
@@ -1131,6 +1177,7 @@ html:lang(ar) .mobile-offcanvas {
   border: none;
   color: #816C4C;
   padding-right: 0;
+  display: block !important;
 }
 
 .navbar-light .navbar-toggler span {
@@ -1294,9 +1341,9 @@ padding: 0.7rem 1rem;
 
 .leadership .card .title {
   background-color: #242424;
-  margin-top: -38px;
+  margin-top: -60px;
+  padding-top: 12px;
 }
-
 /* Mission-About */
 
 .mission-about .bg-img {
@@ -1304,9 +1351,12 @@ padding: 0.7rem 1rem;
   max-width: 100%;
   background-position: center;
   background-size: cover;
-  min-height: 330px;
+  min-height: 390px;
 }
 
+.mission-about .title {
+  color: #242424;
+}
 .mission-about h6 {
   font-size: 31px;
   font-weight: 400;
@@ -1327,14 +1377,14 @@ padding: 0.7rem 1rem;
 }
 
 .mission-about .title-right {
-  margin-left: -60px;
-  margin-top: 60px;
+  margin-left: -70px;
+  margin-top: 54px;
 }
 
 .mission-about .title-left {
   margin: 0px;
-  margin-right: -60px;
-  margin-top: 60px;
+  margin-right: -70px;
+  margin-top: 54px;
 }
 
 .mission-about .title-right .title {
@@ -1417,7 +1467,7 @@ padding: 0.7rem 1rem;
 }
 
   .portfolio-hero {
-     padding: 160px 0 40px;
+     padding: 180px 0 60px;
      color: #fff;
      background-image: url('../../assets/images/portfolio-bg.png');
     background-position: center;
@@ -1425,8 +1475,9 @@ padding: 0.7rem 1rem;
     }
 
   .portfolio-hero h2 {
-    color: #fff;
     margin-top: 30px;
+    font-weight: 400;
+    color: #EFEBE4;
 
   }
 
@@ -1550,6 +1601,19 @@ padding: 0.7rem 1rem;
     margin-top: 40px;
     margin-bottom: 15px;
 }
+.service-page del{
+  font-weight: 400;
+  color: #252525;
+}
+.service-expand .bg-gray{
+  background: #EFEBE4 !important;
+}
+.service-expand .bg-img{
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 
 @media (hover: hover) and (min-width: 600px) {
   .service-block .card:after {
@@ -1605,7 +1669,27 @@ padding: 0.7rem 1rem;
   .container-xl {
     max-width: 1250px;
   }
+  footer h1{
+    font-size: 81px;
+  }
+  .hero-section .para{
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .portfolio-hero {
+    padding-top: 300px;
+    min-height: 770px;
+  }
+  .portfolio-hero h2 {
+    font-size: 80px;
+  }
+  .service-page del{
+    font-size: 43px;
+  }
 
+.service-expand .service-box{
+  max-width: 650px;
+}
 }
 
 @media only screen and (min-width: 567px) {
@@ -1692,6 +1776,10 @@ padding: 0.7rem 1rem;
   .hero-section {
     margin-top: -150px;
   }
+  
+.hero-section.inner-hero {
+  padding-top: 250px;
+}
 
   .mission-about .title-right {
     margin: 0px;
